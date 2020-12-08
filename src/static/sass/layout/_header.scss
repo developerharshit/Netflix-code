@@ -1,0 +1,90 @@
+.header {
+	background-color: #111111;
+	height: 65rem;
+	grid-column: 1 / 13;
+	flex-direction: column;
+	display: flex;
+	justify-content: flex-end;
+
+	&__container {
+		// padding-top: 20rem;
+		padding-left: 4.5rem;
+		justify-self: center;
+		color: white;
+
+		@include responsive(phone) {
+			padding-left: 3rem;
+		}
+
+		&--heading {
+			font-size: 6rem;
+			padding-bottom: 1rem;
+
+			@include responsive(phone) {
+				font-size: 4rem;
+			}
+		}
+
+		&--listbtn,
+		&--playbtn {
+			font-size: 1.6rem;
+			color: white;
+			outline: none;
+			border: none;
+			font-weight: 700;
+			border-radius: 0.2vw;
+			padding: 1rem 3.5rem;
+			margin-right: 1rem;
+			background-color: rgba(51, 51, 51, 0.5);
+			cursor: pointer;
+
+			&:hover {
+				color: #000;
+				background-color: #e6e6e6;
+				transition: all 0.2s;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+				& > * {
+					fill: #000;
+				}
+			}
+		}
+		&-list {
+			width: 15px;
+			height: 15px;
+			fill: white;
+			margin-right: 1rem;
+		}
+
+		&-play {
+			width: 15px;
+			height: 15px;
+			fill: white;
+			margin-right: 1rem;
+		}
+		&-overview {
+			width: 60%;
+			font-size: 1.8rem;
+			padding-top: 2.5rem;
+			line-height: 1.2;
+
+			@include responsive(phone) {
+				width: 88%;
+			}
+		}
+	}
+	&--fade-bottom {
+		height: 22rem;
+		width: 100%;
+		justify-self: flex-end;
+		background-image: linear-gradient(
+			180deg,
+			transparent,
+			rgba(37, 37, 37, 0.65),
+			rgb(17, 17, 17)
+		);
+		@include responsive(phone) {
+			height: 15rem;
+		}
+	}
+}

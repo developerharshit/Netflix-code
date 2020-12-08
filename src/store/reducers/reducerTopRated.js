@@ -1,0 +1,14 @@
+import { FETCH_TOP_RATED } from '../actions/index';
+
+export default function (state = {}, action) {
+  switch (action.type) {
+    case FETCH_TOP_RATED:
+      const data = {
+        title: 'Top Rated Movies',
+        movies: action.payload
+      }
+      return { ...state, data };
+    default:
+      return state;
+  }
+}
